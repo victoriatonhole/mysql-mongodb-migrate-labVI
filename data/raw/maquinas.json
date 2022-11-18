@@ -1,0 +1,31 @@
+{
+"maquinas": [
+	{
+		"id_maquina" : 1,
+		"id_linha_producao" : 1,
+		"nome_maquina" : "ESTEIRA",
+		"descricao" : "ESTEIRA DA LINHA DE PRODUCAO",
+		"status" : "ATIVA"
+	},
+	{
+		"id_maquina" : 2,
+		"id_linha_producao" : 2,
+		"nome_maquina" : "EMPILHADEIRA",
+		"descricao" : "EMPILHADEIRA",
+		"status" : "ATIVA"
+	},
+	{
+		"id_maquina" : 3,
+		"id_linha_producao" : 3,
+		"nome_maquina" : "MAQUINA PRINCIPAL",
+		"descricao" : "PRINCIPAL DA LINHA DE PRODUÇÃO",
+		"status" : "ATIVA"
+	},
+	{
+		"id_maquina" : 4,
+		"id_linha_producao" : 4,
+		"nome_maquina" : "MAQUINA DE EMBALAGEM",
+		"descricao" : "MAQUINA DE EMBALAGEM DA LINHA DE PRODUCAO",
+		"status" : "ATIVA"
+	}
+]}

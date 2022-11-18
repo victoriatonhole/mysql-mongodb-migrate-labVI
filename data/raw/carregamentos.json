@@ -1,0 +1,28 @@
+{
+	"carregamentos": [
+		{
+			"id_carregamento": 1,
+			"id_pedido": 1,
+			"data_carregamento": "2022-10-15",
+			"status": "AGUARDANDO"
+		},
+		{
+			"id_carregamento": 2,
+			"id_pedido": 2,
+			"data_carregamento": "2022-10-15",
+			"status": "FINALIZADO"
+		},
+		{
+			"id_carregamento": 3,
+			"id_pedido": 3,
+			"data_carregamento": "2022-10-15",
+			"status": "EM TRANSITO"
+		},
+		{
+			"id_carregamento": 4,
+			"id_pedido": 4,
+			"data_carregamento": "2022-10-15",
+			"status": "FINALIZADO"
+		}
+	]
+}
