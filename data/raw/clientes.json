@@ -1,48 +1,49 @@
 {
-"clientes": [
-	{
-		"id_cliente" : 1,
-		"nome_cliente" : "VICTORIA",
-		"documento" : "1312321312",
-		"razao_social" : "VICTORIA MINAS",
-		"endereco" : "RUA DAS FLORES",
-		"tipo" : "JURIDICO",
-		"status" : "ATIVO"
-	},
-	{
-		"id_cliente" : 2,
-		"nome_cliente" : "PEDRO",
-		"documento" : "1312321315",
-		"razao_social" : "PEDRO MINAS",
-		"endereco" : "RUA DAS ROSAS",
-		"tipo" : "JURIDICO",
-		"status" : "ATIVO"
-	},
-	{
-		"id_cliente" : 3,
-		"nome_cliente" : "JOAO",
-		"documento" : "48464545684",
-		"razao_social" : "JOAO MINAS",
-		"endereco" : "RUA DAS ALELUIAS",
-		"tipo" : "JURIDICO",
-		"status" : "ATIVO"
-	},
-	{
-		"id_cliente" : 4,
-		"nome_cliente" : "MARCIA",
-		"documento" : "2343243232",
-		"razao_social" : "MARCIA DO CORTE",
-		"endereco" : "RUA DOS CACTOS",
-		"tipo" : "JURIDICO",
-		"status" : "INATIVO"
-	},
-	{
-		"id_cliente" : 5,
-		"nome_cliente" : "ROGERIA",
-		"documento" : "34543634637",
-		"razao_social" : "REG",
-		"endereco" : "RUA DOS DEUSES",
-		"tipo" : "FISICO",
-		"status" : "ATIVO"
-	}
-]}
+	"clientes": [
+		{
+			"id_cliente" : 1,
+			"nome_cliente" : "VICTORIA",
+			"documento" : "1312321312",
+			"razao_social" : "VICTORIA MINAS",
+			"endereco" : "RUA DAS FLORES",
+			"tipo" : "JURIDICO",
+			"status" : "ATIVO"
+		},
+		{
+			"id_cliente" : 2,
+			"nome_cliente" : "PEDRO",
+			"documento" : "1312321315",
+			"razao_social" : "PEDRO MINAS",
+			"endereco" : "RUA DAS ROSAS",
+			"tipo" : "JURIDICO",
+			"status" : "ATIVO"
+		},
+		{
+			"id_cliente" : 3,
+			"nome_cliente" : "JOAO",
+			"documento" : "48464545684",
+			"razao_social" : "JOAO MINAS",
+			"endereco" : "RUA DAS ALELUIAS",
+			"tipo" : "JURIDICO",
+			"status" : "ATIVO"
+		},
+		{
+			"id_cliente" : 4,
+			"nome_cliente" : "MARCIA",
+			"documento" : "2343243232",
+			"razao_social" : "MARCIA DO CORTE",
+			"endereco" : "RUA DOS CACTOS",
+			"tipo" : "JURIDICO",
+			"status" : "INATIVO"
+		},
+		{
+			"id_cliente" : 5,
+			"nome_cliente" : "ROGERIA",
+			"documento" : "34543634637",
+			"razao_social" : "REG",
+			"endereco" : "RUA DOS DEUSES",
+			"tipo" : "FISICO",
+			"status" : "ATIVO"
+		}
+	]
+}

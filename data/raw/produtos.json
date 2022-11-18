@@ -1,38 +1,39 @@
 {
-"produtos": [
-	{
-		"id_produto" : 1,
-		"nome_produto" : "CELULAR 1",
-		"valor" : 1000.0,
-		"descricao" : "256GB 8GB 5G",
-		"quantidade_estoque" : 1000
-	},
-	{
-		"id_produto" : 2,
-		"nome_produto" : "CELULAR 2",
-		"valor" : 2000.0,
-		"descricao" : "256GB 10GB 5G",
-		"quantidade_estoque" : 1000
-	},
-	{
-		"id_produto" : 3,
-		"nome_produto" : "CELULAR 3",
-		"valor" : 3000.0,
-		"descricao" : "256GB 12GB 5G",
-		"quantidade_estoque" : 1000
-	},
-	{
-		"id_produto" : 4,
-		"nome_produto" : "CELULAR 4",
-		"valor" : 1500.0,
-		"descricao" : "128GB 6GB 5G",
-		"quantidade_estoque" : 1000
-	},
-	{
-		"id_produto" : 5,
-		"nome_produto" : "CELULAR 5",
-		"valor" : 1000.0,
-		"descricao" : "128GB 8GB 5G",
-		"quantidade_estoque" : 1000
-	}
-]}
+	"produtos": [
+		{
+			"id_produto" : 1,
+			"nome_produto" : "CELULAR 1",
+			"valor" : 1000.0,
+			"descricao" : "256GB 8GB 5G",
+			"quantidade_estoque" : 1000
+		},
+		{
+			"id_produto" : 2,
+			"nome_produto" : "CELULAR 2",
+			"valor" : 2000.0,
+			"descricao" : "256GB 10GB 5G",
+			"quantidade_estoque" : 1000
+		},
+		{
+			"id_produto" : 3,
+			"nome_produto" : "CELULAR 3",
+			"valor" : 3000.0,
+			"descricao" : "256GB 12GB 5G",
+			"quantidade_estoque" : 1000
+		},
+		{
+			"id_produto" : 4,
+			"nome_produto" : "CELULAR 4",
+			"valor" : 1500.0,
+			"descricao" : "128GB 6GB 5G",
+			"quantidade_estoque" : 1000
+		},
+		{
+			"id_produto" : 5,
+			"nome_produto" : "CELULAR 5",
+			"valor" : 1000.0,
+			"descricao" : "128GB 8GB 5G",
+			"quantidade_estoque" : 1000
+		}
+	]
+}

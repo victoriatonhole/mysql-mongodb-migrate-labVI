@@ -1,23 +1,24 @@
 {
-"setores": [
-	{
-		"id_setor" : 1,
-		"nome_setor" : "MONTAGEM",
-		"descricao" : "MONTAGEM DOS APARELHOS"
-	},
-	{
-		"id_setor" : 2,
-		"nome_setor" : "PACOTE",
-		"descricao" : "EMBALANDO OS APARELHOS"
-	},
-	{
-		"id_setor" : 3,
-		"nome_setor" : "TESTES",
-		"descricao" : "TESTANDO OS APARELHOS E OS COMPONENTES"
-	},
-	{
-		"id_setor" : 4,
-		"nome_setor" : "MANUTENÇÃO",
-		"descricao" : "MANUTENÇÃO DE APARELHOS E COMPONENTES"
-	}
-]}
+	"setores": [
+		{
+			"id_setor" : 1,
+			"nome_setor" : "MONTAGEM",
+			"descricao" : "MONTAGEM DOS APARELHOS"
+		},
+		{
+			"id_setor" : 2,
+			"nome_setor" : "PACOTE",
+			"descricao" : "EMBALANDO OS APARELHOS"
+		},
+		{
+			"id_setor" : 3,
+			"nome_setor" : "TESTES",
+			"descricao" : "TESTANDO OS APARELHOS E OS COMPONENTES"
+		},
+		{
+			"id_setor" : 4,
+			"nome_setor" : "MANUTENÇÃO",
+			"descricao" : "MANUTENÇÃO DE APARELHOS E COMPONENTES"
+		}
+	]
+}
