@@ -1,8 +1,7 @@
-const { MONGO_DB } = require('./constants');
 const mongoConn = require('./connections/mongodb');
 
-const collection_pedidos = require('./data/collections/pedidos.json');
-const collection_setores = require('./data/collections/setor.json');
+const collectionPedidos = require('./data/collections/pedidos.json');
+const collectionSetores = require('./data/collections/setor.json');
 
 async function migrate() {
   await mongoConn.connect();
@@ -11,20 +10,14 @@ async function migrate() {
   const pedidos = db.collection('pedidos');
   const tvShows = db.collection('setores');
 
-  let data = [];
-  try {
-    data['pedidos'] = await pedidos.insertMany(collection_pedidos);
-    data['setores'] = await tvShows.insertMany(collection_setores);
-  } catch(err) {
-    throw err;
-  }
-  return data;
+  await pedidos.insertMany(collectionPedidos);
+  await tvShows.insertMany(collectionSetores);
 }
 
-migrate().then((data) => {
-  console.log(data);
-}).catch(err => {
+try {
+  await migrate();
+} catch (err) {
   console.log(err);
-}).finally(() => {
+} finally {
   mongoConn.close();
-});
+}

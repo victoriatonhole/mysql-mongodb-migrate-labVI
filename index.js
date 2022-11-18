@@ -1,65 +1,48 @@
-const fs = require("fs")
+const fs = require('fs');
 
-let clientes = require('./data/raw/clientes.json');
-let pedidos = require('./data/raw/pedidos.json');
-let produtos = require('./data/raw/produtos.json');
-let linhas_producao = require('./data/raw/linhas_producao.json');
-let setores = require('./data/raw/setores.json');
-let maquinas = require('./data/raw/maquinas.json');
-let funcionarios = require('./data/raw/funcionarios.json');
-let carregamentos = require('./data/raw/carregamentos.json');
+const { clientes } = require('./data/raw/clientes.json');
+const { pedidos } = require('./data/raw/pedidos.json');
+const { produtos } = require('./data/raw/produtos.json');
+const { linhas_producao } = require('./data/raw/linhas-producao.json');
+const { setores } = require('./data/raw/setores.json');
+const { maquinas } = require('./data/raw/maquinas.json');
+const { funcionarios } = require('./data/raw/funcionarios.json');
+const { carregamentos } = require('./data/raw/carregamentos.json');
 
-function load() {
-    console.log('-----------------------------------');
-    console.log('------------- PEDIDOS -------------');
-    console.log('-----------------------------------');
+(function load() {
+    console.log('\n\n\n\n', '------------- PEDIDOS -------------', '\n\n\n\n');
 
-    let collection_pedidos = [];
-    pedidos.pedidos.map(pedido => {
-        pedido['produto'] = produtos.produtos.find(item => item.id_produto === pedido.id_produto);
-        pedido['cliente'] = clientes.clientes.filter(item => item.id_cliente === pedido.id_cliente);
-        pedido['carregamento'] = carregamentos.carregamentos.filter(item => item.id_pedido === pedido.id_pedido);
-        
-        collection_pedidos.push(pedido);
+    const collectionPedidos = pedidos.map((pedido) => ({
+        ...pedido,
+        produto: produtos.find(item => item.id_produto === pedido.id_produto),
+        cliente: clientes.filter(item => item.id_cliente === pedido.id_cliente),
+        carregamento: carregamentos.filter(item => item.id_pedido === pedido.id_pedido),
+    }));
 
-    });
-
-    fs.writeFile('./data/collections/pedidos.json', JSON.stringify(collection_pedidos), (err) => {
+    fs.writeFile('./data/collections/pedidos.json', JSON.stringify(collectionPedidos), (err) => {
         if (err) throw err;
-        console.log('pedidos saved!');
     });
 
-    console.log(collection_pedidos);
+    console.log(collectionPedidos);
 
-    console.log('-----------------------------------');
-    console.log('------------- SETORES -------------');
-    console.log('-----------------------------------');
+    console.log('\n\n\n\n', '------------- SETORES -------------', '\n\n\n\n');
 
-    let collection_setores = [];
-    setores.setores.map(setor => {
-        let Linhas = [];
-        let Maquinas = [];    
-        setor['linhas'] = [];
+    const collectionSetores = setores.map((setor) => ({
+        ...setor,
+        linhas: {
+            ...linhas_producao.find(item => item.id_setor === setor.id_setor),
+            maquinas: maquinas.filter(item => item.id_linha_producao === linhas_producao
+                .find(item => item.id_setor === setor.id_setor)
+                .id_linha_producao),
+            produtos: produtos.filter(item => item.id_produto === linhas_producao
+                .find(item => item.id_setor === setor.id_setor).id_produto),
+        },
+        funcionarios: funcionarios.filter(item => item.id_setor === setor.id_setor),
+    }));
 
-        Linhas['linhas'] = linhas_producao.linhas_producao.find(item => item.id_setor === setor.id_setor);
+    console.log(collectionSetores);
 
-        Maquinas = maquinas.maquinas.filter(item => item.id_linha_producao === Linhas['linhas'].id_linha_producao);
-        
-        Linhas['linhas']['maquinas'] = Maquinas;
-        Linhas['linhas']['produtos'] = produtos.produtos.filter(item => item.id_produto === Linhas['linhas'].id_produto);;
-
-        setor['funcionarios'] = funcionarios.funcionarios.filter(item => item.id_setor === setor.id_setor);
-        setor['linhas'] = Linhas['linhas'];
-
-        collection_setores.push(setor);
-    });
-
-    console.log(collection_setores);
-
-    fs.writeFile('./data/collections/setor.json', JSON.stringify(collection_setores), (err) => {
+    fs.writeFile('./data/collections/setor.json', JSON.stringify(collectionSetores), (err) => {
         if (err) throw err;
-        console.log('setor saved!');
     });
-}
-
-load();
+})();
